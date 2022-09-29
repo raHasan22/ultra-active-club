@@ -1,0 +1,14 @@
+.main-body{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.container h1{
+    text-align: center;
+}
+.games-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 20px;
+    padding: 0px 30px;
+}

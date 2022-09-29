@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sidebar.css'
 
 const Sidebar = (props) => {
     const [restTime, setARestTime] = useState(0);
-    function setRestTime(num){
-        const newRestTime = num;
-        localStorage.setItem('Rest-time-in-seconds', JSON.stringify(newRestTime))
-        const localRestTime = localStorage.getItem('Rest-time-in-seconds');
-        setARestTime(JSON.parse(localRestTime));
-    }
+    const [DisplayRestTime, setDisplayRestTime] = useState(0);
+    useEffect( () =>{
+        const x = localStorage.getItem('Rest-time-in-seconds')
 
+        setDisplayRestTime(0 + JSON.parse(x))
+    },[restTime])
+
+    
+    
+    function setRestTime(num){
+        const newRestTime = num+ 0;
+        setARestTime(newRestTime);
+        localStorage.setItem('Rest-time-in-seconds', JSON.stringify(newRestTime))
+    }
+    
     return (
         <div className='sidebar'>
             <h3>RA Hasan</h3>
@@ -30,7 +38,7 @@ const Sidebar = (props) => {
             <br />
             <br />
             <p><strong>TOTAL TIME:</strong> {props.value}Min</p>
-            <p><strong>Break Time:</strong> {restTime}s</p>
+            <p><strong>Break Time:</strong> {DisplayRestTime}s</p>
             <br />
             <br />
             <button>Start Booking</button>

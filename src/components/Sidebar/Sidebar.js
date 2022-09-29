@@ -5,6 +5,7 @@ const Sidebar = (props) => {
     const [restTime, setARestTime] = useState(0);
     function setRestTime(num){
         const newRestTime = num;
+        localStorage.setItem('Rest-time-in-seconds', JSON.stringify(newRestTime))
         setARestTime(newRestTime);
     }
 
@@ -31,7 +32,7 @@ const Sidebar = (props) => {
             <p><strong>Break Time:</strong> {restTime}s</p>
             <br />
             <br />
-            <button>Start Download</button>
+            <button>Start Booking</button>
         </div>
     );
 };

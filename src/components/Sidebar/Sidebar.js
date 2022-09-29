@@ -6,7 +6,8 @@ const Sidebar = (props) => {
     function setRestTime(num){
         const newRestTime = num;
         localStorage.setItem('Rest-time-in-seconds', JSON.stringify(newRestTime))
-        setARestTime(newRestTime);
+        const localRestTime = localStorage.getItem('Rest-time-in-seconds');
+        setARestTime(JSON.parse(localRestTime));
     }
 
     return (

@@ -47,7 +47,7 @@ const Body = () => {
                 <div className='blogs-details'>
                     <div className='blogs-component'>
                         <h4>How react works?</h4>
-                        <p>ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props. It's possible to have as many components as necessary without cluttering your code.</p>
+                        <p>ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props. It's possible to have as many components as necessary without cluttering your code. It takes code like html and covert to javascript.</p>
                     </div>
                     <div className='blogs-component'>
                         <h4>Difference between props and state?</h4>

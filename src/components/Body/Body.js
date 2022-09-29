@@ -11,6 +11,10 @@ const Body = () => {
             .then(function(data) {setGames(data);
             });})
     }, [])
+
+    const handleAddButton = (game) => {
+        console.log(game)
+    }
     
     return (
         <div className='main-body'>
@@ -21,6 +25,7 @@ const Body = () => {
                     games.map(game => <Games
                     key={game.idSport}
                     game={game}
+                    handleAddButton ={handleAddButton}
                     ></Games>)
                 }
             </div>

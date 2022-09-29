@@ -3,6 +3,7 @@ import './Games.css'
 
 const Games = (props) => {
     const {strSport, strFormat, strSportThumb, timeNeed} = props.game;
+    const {handleAddButton} = props;
     return (
         <div className='single-game'>
             <img src={strSportThumb} alt=""></img>
@@ -11,7 +12,7 @@ const Games = (props) => {
             <p><strong>Format:</strong> {strFormat}</p>
             <p><strong>Time:</strong> {timeNeed}min</p>
             </div>
-            <button>Add</button>
+            <button onClick={() => handleAddButton(props.game)}>Add</button>
         </div>
     );
 };

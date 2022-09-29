@@ -8,8 +8,8 @@ const Games = (props) => {
             <img src={strSportThumb} alt=""></img>
             <div className='details'>
             <h3>{strSport}</h3>
-            <p>Format: {strFormat}</p>
-            <p>Time: {timeNeed}min</p>
+            <p><strong>Format:</strong> {strFormat}</p>
+            <p><strong>Time:</strong> {timeNeed}min</p>
             </div>
             <button>Add</button>
         </div>

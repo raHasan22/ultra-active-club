@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Games from '../Games/Games';
+import Sidebar from '../Sidebar/Sidebar';
 import './Body.css'
 
 const Body = () => {
     const [games, setGames] = useState([]);
-  
-    useEffect( () => {
+        useEffect( () => {
         fetch('fakedata.json')
         .then(function(response){response.json()
             .then(function(data) {setGames(data);
@@ -15,7 +15,7 @@ const Body = () => {
     return (
         <div className='main-body'>
             <div className='container'>
-                <h1>Popular Sports</h1>
+                <h1>Download Games</h1>
             <div className='games-container'>
                 {
                     games.map(game => <Games
@@ -25,8 +25,8 @@ const Body = () => {
                 }
             </div>
             </div>
-            <div>
-                <h1>Sidepart</h1>
+            <div className='Count-time'>
+                <Sidebar></Sidebar>
             </div>
         </div>
     );

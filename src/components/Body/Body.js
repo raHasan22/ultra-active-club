@@ -26,7 +26,7 @@ const Body = () => {
     return (
         <div className='main-body'>
             <div className='container'>
-                <h1>Download Games</h1>
+                <h1>Booking PLAYGROUNDS</h1>
             <div className='games-container'>
                 {
                     games.map(game => <Games

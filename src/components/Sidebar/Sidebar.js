@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css'
 
 const Sidebar = (props) => {
     const [restTime, setARestTime] = useState(0);
     function setRestTime(num){
-        setARestTime(num)
+        const newRestTime = num;
+        setARestTime(newRestTime);
     }
 
     return (
@@ -17,16 +18,17 @@ const Sidebar = (props) => {
             <p><small>Age: 23yrs</small></p>
             <p><small>Premium: No</small></p>
             <div className='button-div'>
-                <h5>Download at a time</h5>
-            <button onClick={()=> setRestTime(1)}>1</button>
-            <button onClick={()=> setRestTime(2)}>2</button>
-            <button onClick={()=> setRestTime(3)}>3</button>
-            <button onClick={()=> setRestTime(4)}>4</button>
+                <h5>Break Time</h5>
+            <button onClick={()=> setRestTime(10)}>10s</button>
+            <button onClick={()=> setRestTime(20)}>20s</button>
+            <button onClick={()=> setRestTime(30)}>30s</button>
+            <button onClick={()=> setRestTime(40)}>40s</button>
+            <button onClick={()=> setRestTime(50)}>50s</button>
             </div>
             <br />
             <br />
-            <p><strong>TOTAL TIME:</strong> {props.value} Min</p>
-            <p><strong>Total download once:</strong> {restTime}</p>
+            <p><strong>TOTAL TIME:</strong> {props.value}Min</p>
+            <p><strong>Break Time:</strong> {restTime}s</p>
             <br />
             <br />
             <button>Start Download</button>
